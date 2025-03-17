@@ -1,409 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yuthara Jayanetti</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
-<style>
-.about-section {
-    text-align: center;
-    padding: 50px 0;
-  }
-  .about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  .about-section img {
-    width: 200px; /* Adjust the size as needed */
-    height: 250px;
-    border-radius: 25%; /* Makes the image round */
-    margin-bottom: 20px;
-  }
-  .about-section p {
-    color: #333;
-  }
-
-  /* Additional CSS for Projects Section */
-.projects-section h2 {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-}
-.card {
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
-}
-.card-img-top {
-  max-height: 180px; /* Adjust this value to fit the image properly in the card */
-  object-fit: cover; /* This makes sure the image covers the area properly */
-}
-.card-body {
-  padding: 15px;
-}
-.card-title {
-  font-size: 1.25rem;
-}
-.card-text {
-  margin-bottom: 15px;
-}
-
-/* Additional CSS for Skills Section */
-.skills-section h2 {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-}
-.skills-section .card {
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.skills-section .card-img-top {
-  padding: 20px; /* Add padding around your images if needed */
-  background-color: #f8f9fa; /* Adjust the background color if your images have transparent areas */
-  height: 180px; /* Fixed height for consistency */
-  object-fit: contain; /* This will make sure the image is scaled properly within the container */
-}
-.skills-section .card-body {
-  padding: 15px;
-}
-.skills-section .card-title {
-  font-size: 1.25rem;
-  margin-bottom: 15px;
-}
-.skills-section .btn-outline-primary {
-  color: #007bff;
-  border-color: #007bff;
-}
-.skills-section .btn-outline-primary:hover {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-/* Additional CSS for Contact Section */
-.contact-section {
-  padding: 50px 0;
-}
-.contact-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-.contact-section p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-.social-icon {
-  width: 50px; /* Size of your icons */
-  margin-bottom: 10px;
-}
-/* Hover effect for icons */
-.social-icon:hover {
-  opacity: 0.7;
-}
-/* Style for links in the Contact section */
-.contact-section a {
-  color: #fff;
-  text-decoration: none; /* Removes underline from links */
-  display: inline-block; /* Allows for margin on the bottom */
-  margin-bottom: 10px;
-}
-.contact-section a:hover {
-  color: #ddd; /* Color when hovering over the link */
-}
-
-/* CSS for Sticky Navbar */
-.navbar {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
-}
-
-/* Ensure padding is added to body to avoid content being hidden behind the navbar */
-body { 
-  padding-top: 56px; /* Adjust this value based on the height of your navbar */
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Style for navigation bar links */
-.navbar-nav .nav-link {
-  color: white;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #f8f9fa; /* Slightly lighter white when hovering over links */
-}
-
-/* Media query for responsive navbar collapsing */
-@media (max-width: 992px) {
-  .navbar-collapse {
-    background-color: #343a40; /* Same as navbar color for seamless look */
-  }
-}
-</style>
-</head>
-<body>
-
-  <!-- Sticky Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#about">Your Name</a> 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto"> 
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuthara Jayanetti | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Yuthara Jayanetti</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Yuthara Jayanetti</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="profile-content">
+        <div class="section__pic-container">
+          <img src="assets/About Pic1.jpeg.jpg" alt="Yuthara Jayanetti profile picture" />
+        </div>
+        <div class="section__text">
+          <p class="section__text__p1">Hello, I'm</p>
+          <h1 class="title">Yuthara Jayanetti</h1>
+          <p class="section__text__p2">Applied Data Science Communication Undergraduate</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('assets/CV new.pdf')">
+              <i class="fas fa-download"></i> Download CV
+            </button>
+            <button class="btn btn-color-1" onclick="location.href='#contact'">
+              <i class="fas fa-envelope"></i> Contact Info
+            </button>
+          </div>
+          <div id="socials-container">
+            <a href="https://linkedin.com/YutharaJayanetti" target="_blank" class="social-icon">
+              <i class="fab fa-linkedin icon"></i>
+            </a>
+            <a href="https://github.com/Yutharaj" target="_blank" class="social-icon">
+              <i class="fab fa-github icon"></i>
+            </a>
+            <a href="#" target="_blank" class="social-icon">
+              <i class="fab fa-instagram icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id='about' class="about-section">
-    <div class="container">
-      <h2 class="section-title">About</h2>
-      <img src="assets\About Pic.jpg" alt="About Pic" class="img-fluid">
-      <p>I am a final-year BSc. Applied Data Science & Communication undergraduate at General Sir John Kotelawala Defence University, specializing in AI, predictive analytics, and data-driven decision-making. With a strong foundation in machine learning and NLP, I am passionate about transforming unstructured data into actionable insights. I have experience working with Microsoft Power Platform, SharePoint, Power Automate, and Power Apps to develop smart, scalable solutions. My expertise extends to web scraping, sentiment analysis, and building AI-driven applications that enhance decision-making. I am a collaborative problem-solver committed to ethical AI practices and leveraging data science to drive meaningful impact. Let’s connect and explore opportunities to innovate with data. </p>
-    </div>
-  </section>
-
-<!-- Projects Section -->
-<section id="projects" class="projects-section bg-light">
-  <div class="container">
-    <h2 class="text-center">Projects</h2>
-    <div class="row">
-      <!-- Child Wellbeing Monitor -->
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="project img/DALL·E 2025-03-17 09.13.59 - A modern data visualization dashboard focused on child wellbeing indicators. The image features graphs, charts, and maps displaying child poverty stat.webp" class="card-img-top" alt="Child Wellbeing Monitor">
-          <div class="card-body">
-            <h5 class="card-title">Child Wellbeing Monitor</h5>
-            <p class="card-text">Developed a data-driven reporting solution to assess and compare child poverty in Vietnam and Ethiopia using key poverty indicators.</p>
-            <a href="https://github.com/Yutharaj/Child-Monitor" class="btn btn-secondary">Source Code</a>
+    
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="assets/IMG-20240311-WA0024.jpg" alt="Profile picture" class="about-pic" />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="education-tree">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <h3>Bachelor of Science in Applied Data Science Communication</h3>
+                    <p>University Name | 2021 - Present</p>
+                    <p>Relevant coursework: Data Analysis, Machine Learning, Data Visualization, Communication Strategies.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-icon">
+                    <i class="fas fa-school"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <h3>High School Diploma</h3>
+                    <p>High School Name | 2017 - 2020</p>
+                    <p>Focus: Mathematics, Science, and Computer Science.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-icon">
+                    <i class="fas fa-certificate"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <h3>Certification in Python Programming</h3>
+                    <p>Online Platform | 2020</p>
+                    <p>Learned Python fundamentals, data structures, and algorithms.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="skills-container">
+              <h3>Skills</h3>
+              <div class="skills-grid">
+                <div class="skill-item">Data Analysis</div>
+                <div class="skill-item">Machine Learning</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">R</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Data Visualization</div>
+              </div>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I am a passionate and driven Applied Data Science Communication undergraduate with a strong interest in data analysis, machine learning, and data visualization. I enjoy solving complex problems and turning data into actionable insights. My goal is to leverage my skills to make a meaningful impact in the field of data science.
+            </p>
           </div>
         </div>
       </div>
-      <!-- Greater Manchester Domestic Energy Performance Analyzer -->
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="project img/DALL·E 2025-03-17 09.14.03 - An interactive data dashboard displaying energy performance trends in Greater Manchester. The dashboard includes graphs, charts, and energy efficiency.webp" class="card-img-top" alt="Greater Manchester Domestic Energy Performance Analyzer">
-          <div class="card-body">
-            <h5 class="card-title">Greater Manchester Domestic Energy Performance Analyzer</h5>
-            <p class="card-text">Designed an interactive Power BI dashboard to analyse energy performance trends in Greater Manchester using Energy Performance Certificate (EPC) data.</p>
-            <a href="https://github.com/Yutharaj/Greater-Manchester-Domestic-Energy-Performance-Analyser-2013-2023-" class="btn btn-secondary">Source Code</a>
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h3>Data Analyst Intern</h3>
+            <p>XYZ Company | Jan 2023 - Present</p>
+            <ul>
+              <li>Analyzed large datasets to identify trends and patterns.</li>
+              <li>Created interactive dashboards using Tableau.</li>
+              <li>Collaborated with cross-functional teams to deliver insights.</li>
+            </ul>
+          </div>
+          <div class="details-container">
+            <h3>Machine Learning Intern</h3>
+            <p>ABC Labs | Jun 2022 - Dec 2022</p>
+            <ul>
+              <li>Developed predictive models using Python and Scikit-learn.</li>
+              <li>Preprocessed and cleaned data for model training.</li>
+              <li>Presented findings to stakeholders in a clear and concise manner.</li>
+            </ul>
           </div>
         </div>
       </div>
-      <!-- Automated Travel Request App -->
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="project img/DALL·E 2025-03-17 09.14.06 - A modern UI dashboard showcasing an automated travel request system. The interface includes approval workflows, employee leave management, and streaml.webp" class="card-img-top" alt="Automated Travel Request App">
-          <div class="card-body">
-            <h5 class="card-title">Automated Travel Request App</h5>
-            <p class="card-text">Developed a custom leave request application with automated approval workflows to streamline employee leave management, reducing manual HR workload and improving efficiency.</p>
-            <a href="https://github.com/Yutharaj/Travel-Request-app-using-power-platforms" class="btn btn-secondary">Source Code</a>
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="about-containers">
+        <div class="color-container">
+          <img src="assets/project1.jpg" alt="Project 1" class="project-img" />
+          <h3 class="project-title">Customer Segmentation</h3>
+          <p class="project-description">
+            Used clustering algorithms to segment customers based on purchasing behavior.
+          </p>
+          <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('https://github.com/Yutharaj/Customer-Segmentation')">
+              GitHub
+            </button>
+            <button class="btn btn-color-1" onclick="window.open('https://yutharaj.github.io/Customer-Segmentation')">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="color-container">
+          <img src="assets/project2.jpg" alt="Project 2" class="project-img" />
+          <h3 class="project-title">Sentiment Analysis</h3>
+          <p class="project-description">
+            Built a sentiment analysis model to classify customer reviews as positive or negative.
+          </p>
+          <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('https://github.com/Yutharaj/Sentiment-Analysis')">
+              GitHub
+            </button>
+            <button class="btn btn-color-1" onclick="window.open('https://yutharaj.github.io/Sentiment-Analysis')">
+              Live Demo
+            </button>
           </div>
         </div>
       </div>
-      <!-- AI-Powered Policy Generator & Summarizer -->
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="project img/DALL·E 2025-03-17 09.14.08 - A futuristic AI-powered document summarization and policy generation system. The image features a digital interface with AI analyzing text documents, .webp" class="card-img-top" alt="AI-Powered Policy Generator & Summarizer">
-          <div class="card-body">
-            <h5 class="card-title">AI-Powered Policy Generator & Summarizer</h5>
-            <p class="card-text">This web application uses NLP and Generative AI to summarize policy documents and generate structured policies based on user-defined scenarios, aiding policymakers and researchers.</p>
-            <a href="https://github.com/Yutharaj/AI-Powered-Policy-Generator-Summarizer" class="btn btn-secondary">Source Code</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Skills Section -->
-<section id="skills" class="skills-section bg-white">
-  <div class="container">
-    <h2 class="text-center">Skills</h2>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="skill-bar">
-          <p>Python <span class="percentage">90%</span></p>
-          <div class="bar-container">
-            <div class="bar python"></div>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <p>SQL <span class="percentage">85%</span></p>
-          <div class="bar-container">
-            <div class="bar sql"></div>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <p>Power BI <span class="percentage">80%</span></p>
-          <div class="bar-container">
-            <div class="bar powerbi"></div>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <p>Power Apps <span class="percentage">75%</span></p>
-          <div class="bar-container">
-            <div class="bar powerapps"></div>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <p>Power Automate <span class="percentage">70%</span></p>
-          <div class="bar-container">
-            <div class="bar powerautomate"></div>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <p>R Programming <span class="percentage">65%</span></p>
-          <div class="bar-container">
-            <div class="bar r"></div>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <p>Microsoft Word <span class="percentage">95%</span></p>
-          <div class="bar-container">
-            <div class="bar word"></div>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <p>Microsoft Excel <span class="percentage">90%</span></p>
-          <div class="bar-container">
-            <div class="bar excel"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-  .skill-bar {
-    margin: 20px 0;
-    position: relative;
-  }
-  .bar-container {
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-  .bar {
-    height: 25px;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #007bff, #00c6ff);
-    animation: fillBar 2s ease-in-out;
-  }
-  .python { width: 90%; }
-  .sql { width: 85%; }
-  .powerbi { width: 80%; }
-  .powerapps { width: 75%; }
-  .powerautomate { width: 70%; }
-  .r { width: 65%; }
-  .word { width: 95%; }
-  .excel { width: 90%; }
-  
-  .percentage {
-    float: right;
-    font-weight: bold;
-    color: #007bff;
-  }
-  @keyframes fillBar {
-    from { width: 0%; }
-    to { width: 100%; }
-  }
-</style>
+    </section>
 
 
-<!-- Contact Me Section -->
-<section id="contact" class="contact-section text-center text-white bg-dark">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <div class="row">
-      <div class="col-lg-6">
-        <p><i class="fas fa-envelope"></i> 40-adc-0023@kdu.ac.lk
+    <section id="contact">
+      <div class="contact-header">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <p>If you have any questions or would like to connect, feel free to reach out!</p>
       </div>
-      <div class="col-lg-6">
-        <p><i class="fas fa-phone"></i> +94761651987
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-info-container">
+            <i class="fas fa-envelope icon contact-icon email-icon"></i>
+            <p><a href="mailto:yuthiyasasnit@gmail.com">yuthiyasasnit@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+            <i class="fas fa-phone-alt icon contact-icon phone-icon"></i>
+            <p>(+94) 76 165 1987</p>
+          </div>
+          <div class="contact-info-container">
+            <i class="fas fa-map-marker-alt icon contact-icon location-icon"></i>
+            <p>Rathmalana, Colombo</p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn btn-color-1">Send Message</button>
+          </form>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://www.linkedin.com/in/yuthara-jayanetti-67086423b/" target="_blank">
-          <img src="assets/linkedin.png" alt="LinkedIn" class="social-icon">
-          LinkedIn
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://github.com/Yutharaj" target="_blank">
-          <img src="assets/github.png" alt="GitHub" class="social-icon">
-          GitHub
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://medium.com/@yuthiyasasni" target="_blank">
-          <img src="assets/medium.png" alt="Medium" class="social-icon">
-          Medium
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://www.youtube.com/@YutharaJayanetti" target="_blank">
-          <img src="assets/youtube.png" alt="YouTube" class="social-icon">
-          YouTube
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Sticky Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#home">Portfolio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
-  <!-- Bootstrap JS and dependencies (jQuery and Popper) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>Yuthara Jayanetti</h2>
+            <p>Applied Data Science Communication Undergraduate</p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-socials">
+            <h3>Connect with Me</h3>
+            <div class="social-icons">
+              <a href="https://linkedin.com/YutharaJayanetti" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/Yutharaj" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:yuthara.jayanetti@example.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span id="current-year"></span> Yuthara Jayanetti. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
-
